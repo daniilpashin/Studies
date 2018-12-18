@@ -1,0 +1,502 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A57EFD6721B9665200A3DE92 /* IPInterpolation.m in Sources */ = {isa = PBXBuildFile; fileRef = A57EFD6521B9665200A3DE92 /* IPInterpolation.m */; };
+		A5C8F48B21B8EEF0000AF6C3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A5C8F48A21B8EEF0000AF6C3 /* AppDelegate.m */; };
+		A5C8F48E21B8EEF0000AF6C3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5C8F48D21B8EEF0000AF6C3 /* ViewController.m */; };
+		A5C8F49121B8EEF0000AF6C3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5C8F48F21B8EEF0000AF6C3 /* Main.storyboard */; };
+		A5C8F49321B8EEF3000AF6C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5C8F49221B8EEF3000AF6C3 /* Assets.xcassets */; };
+		A5C8F49621B8EEF3000AF6C3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5C8F49421B8EEF3000AF6C3 /* LaunchScreen.storyboard */; };
+		A5C8F49921B8EEF3000AF6C3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A5C8F49821B8EEF3000AF6C3 /* main.m */; };
+		A5C8F49D21B8EF07000AF6C3 /* LinearInterpolation.m in Sources */ = {isa = PBXBuildFile; fileRef = A54BB91E21B6736700A21C88 /* LinearInterpolation.m */; };
+		A5C8F49E21B8EF07000AF6C3 /* IPPointsParser.m in Sources */ = {isa = PBXBuildFile; fileRef = A5C8F47D21B80116000AF6C3 /* IPPointsParser.m */; };
+		A5C8F49F21B8EF07000AF6C3 /* IPPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = A5C8F47A21B7A9A5000AF6C3 /* IPPoint.m */; };
+		A5C8F4A121B8EF07000AF6C3 /* NSString+Interpolation.m in Sources */ = {isa = PBXBuildFile; fileRef = A5C8F47721B7A681000AF6C3 /* NSString+Interpolation.m */; };
+		A5C8F4A421B8FB35000AF6C3 /* points in Resources */ = {isa = PBXBuildFile; fileRef = A5C8F4A321B8FB35000AF6C3 /* points */; };
+		A5C8F4A721B92EBD000AF6C3 /* IPGraphViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5C8F4A621B92EBD000AF6C3 /* IPGraphViewController.m */; };
+		DD214A0AA067CC6C1C84F9A7 /* Pods_Interpolation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D964294A664E2FDF8D11A748 /* Pods_Interpolation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		42683D719E0FC155AE5C4E1D /* Pods_Interpolation_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Interpolation_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		54B6DBC1C269D0ED0260C110 /* Pods-Interpolation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Interpolation.release.xcconfig"; path = "Pods/Target Support Files/Pods-Interpolation/Pods-Interpolation.release.xcconfig"; sourceTree = "<group>"; };
+		A54BB91D21B6736700A21C88 /* LinearInterpolation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LinearInterpolation.h; sourceTree = "<group>"; };
+		A54BB91E21B6736700A21C88 /* LinearInterpolation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LinearInterpolation.m; sourceTree = "<group>"; };
+		A57EFD6421B9665200A3DE92 /* IPInterpolation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IPInterpolation.h; sourceTree = "<group>"; };
+		A57EFD6521B9665200A3DE92 /* IPInterpolation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IPInterpolation.m; sourceTree = "<group>"; };
+		A5C8F47621B7A681000AF6C3 /* NSString+Interpolation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+Interpolation.h"; sourceTree = "<group>"; };
+		A5C8F47721B7A681000AF6C3 /* NSString+Interpolation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+Interpolation.m"; sourceTree = "<group>"; };
+		A5C8F47921B7A9A5000AF6C3 /* IPPoint.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IPPoint.h; sourceTree = "<group>"; };
+		A5C8F47A21B7A9A5000AF6C3 /* IPPoint.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IPPoint.m; sourceTree = "<group>"; };
+		A5C8F47C21B80116000AF6C3 /* IPPointsParser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IPPointsParser.h; sourceTree = "<group>"; };
+		A5C8F47D21B80116000AF6C3 /* IPPointsParser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IPPointsParser.m; sourceTree = "<group>"; };
+		A5C8F48221B80EAB000AF6C3 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		A5C8F48721B8EEF0000AF6C3 /* Interpolation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Interpolation.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A5C8F48921B8EEF0000AF6C3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		A5C8F48A21B8EEF0000AF6C3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		A5C8F48C21B8EEF0000AF6C3 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		A5C8F48D21B8EEF0000AF6C3 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		A5C8F49021B8EEF0000AF6C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A5C8F49221B8EEF3000AF6C3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A5C8F49521B8EEF3000AF6C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A5C8F49721B8EEF3000AF6C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A5C8F49821B8EEF3000AF6C3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A5C8F4A321B8FB35000AF6C3 /* points */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = points; sourceTree = "<group>"; };
+		A5C8F4A521B92EBD000AF6C3 /* IPGraphViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IPGraphViewController.h; sourceTree = "<group>"; };
+		A5C8F4A621B92EBD000AF6C3 /* IPGraphViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IPGraphViewController.m; sourceTree = "<group>"; };
+		BBB4D1F7A670CA6926AE4C71 /* Pods-Interpolation-App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Interpolation-App.release.xcconfig"; path = "Pods/Target Support Files/Pods-Interpolation-App/Pods-Interpolation-App.release.xcconfig"; sourceTree = "<group>"; };
+		D964294A664E2FDF8D11A748 /* Pods_Interpolation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Interpolation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB2BBB8866CB1E7E1FD4FC27 /* Pods-Interpolation-App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Interpolation-App.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Interpolation-App/Pods-Interpolation-App.debug.xcconfig"; sourceTree = "<group>"; };
+		E154BF505B8CA4C26627C71E /* Pods-Interpolation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Interpolation.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Interpolation/Pods-Interpolation.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A5C8F48421B8EEF0000AF6C3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD214A0AA067CC6C1C84F9A7 /* Pods_Interpolation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		335B5D0076DDBCA1AFF8F6BB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E154BF505B8CA4C26627C71E /* Pods-Interpolation.debug.xcconfig */,
+				54B6DBC1C269D0ED0260C110 /* Pods-Interpolation.release.xcconfig */,
+				DB2BBB8866CB1E7E1FD4FC27 /* Pods-Interpolation-App.debug.xcconfig */,
+				BBB4D1F7A670CA6926AE4C71 /* Pods-Interpolation-App.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		9E5F30B57C2A70EA4D911F12 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				42683D719E0FC155AE5C4E1D /* Pods_Interpolation_App.framework */,
+				D964294A664E2FDF8D11A748 /* Pods_Interpolation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A54BB90A21B670DD00A21C88 = {
+			isa = PBXGroup;
+			children = (
+				A5C8F48821B8EEF0000AF6C3 /* Interpolation */,
+				A54BB91421B670DD00A21C88 /* Products */,
+				335B5D0076DDBCA1AFF8F6BB /* Pods */,
+				9E5F30B57C2A70EA4D911F12 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		A54BB91421B670DD00A21C88 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A5C8F48721B8EEF0000AF6C3 /* Interpolation.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A57EFD6821B9666B00A3DE92 /* Interpolation Classes */ = {
+			isa = PBXGroup;
+			children = (
+				A57EFD6421B9665200A3DE92 /* IPInterpolation.h */,
+				A57EFD6521B9665200A3DE92 /* IPInterpolation.m */,
+				A54BB91D21B6736700A21C88 /* LinearInterpolation.h */,
+				A54BB91E21B6736700A21C88 /* LinearInterpolation.m */,
+			);
+			path = "Interpolation Classes";
+			sourceTree = "<group>";
+		};
+		A57EFD6921B9667900A3DE92 /* Points Classes */ = {
+			isa = PBXGroup;
+			children = (
+				A5C8F47C21B80116000AF6C3 /* IPPointsParser.h */,
+				A5C8F47D21B80116000AF6C3 /* IPPointsParser.m */,
+				A5C8F47921B7A9A5000AF6C3 /* IPPoint.h */,
+				A5C8F47A21B7A9A5000AF6C3 /* IPPoint.m */,
+				A5C8F47621B7A681000AF6C3 /* NSString+Interpolation.h */,
+				A5C8F47721B7A681000AF6C3 /* NSString+Interpolation.m */,
+			);
+			path = "Points Classes";
+			sourceTree = "<group>";
+		};
+		A57EFD6A21B96F8E00A3DE92 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A5C8F48C21B8EEF0000AF6C3 /* ViewController.h */,
+				A5C8F48D21B8EEF0000AF6C3 /* ViewController.m */,
+				A5C8F4A521B92EBD000AF6C3 /* IPGraphViewController.h */,
+				A5C8F4A621B92EBD000AF6C3 /* IPGraphViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		A5C8F48821B8EEF0000AF6C3 /* Interpolation */ = {
+			isa = PBXGroup;
+			children = (
+				A5C8F4A321B8FB35000AF6C3 /* points */,
+				A5C8F48921B8EEF0000AF6C3 /* AppDelegate.h */,
+				A5C8F48A21B8EEF0000AF6C3 /* AppDelegate.m */,
+				A57EFD6A21B96F8E00A3DE92 /* Controllers */,
+				A5C8F48F21B8EEF0000AF6C3 /* Main.storyboard */,
+				A5C8F49221B8EEF3000AF6C3 /* Assets.xcassets */,
+				A5C8F49421B8EEF3000AF6C3 /* LaunchScreen.storyboard */,
+				A5C8F49721B8EEF3000AF6C3 /* Info.plist */,
+				A57EFD6821B9666B00A3DE92 /* Interpolation Classes */,
+				A57EFD6921B9667900A3DE92 /* Points Classes */,
+				A5C8F48221B80EAB000AF6C3 /* PrefixHeader.pch */,
+				A5C8F49821B8EEF3000AF6C3 /* main.m */,
+			);
+			path = Interpolation;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A5C8F48621B8EEF0000AF6C3 /* Interpolation */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A5C8F49A21B8EEF3000AF6C3 /* Build configuration list for PBXNativeTarget "Interpolation" */;
+			buildPhases = (
+				2BBE8F4E000319CBB5E56DDC /* [CP] Check Pods Manifest.lock */,
+				A5C8F48321B8EEF0000AF6C3 /* Sources */,
+				A5C8F48421B8EEF0000AF6C3 /* Frameworks */,
+				A5C8F48521B8EEF0000AF6C3 /* Resources */,
+				B7DFEDD807C303A3AE1042C5 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Interpolation;
+			productName = "Interpolation-App";
+			productReference = A5C8F48721B8EEF0000AF6C3 /* Interpolation.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A54BB90B21B670DD00A21C88 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = IP;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "Даниил";
+				TargetAttributes = {
+					A5C8F48621B8EEF0000AF6C3 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+				};
+			};
+			buildConfigurationList = A54BB90E21B670DD00A21C88 /* Build configuration list for PBXProject "Interpolation" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A54BB90A21B670DD00A21C88;
+			productRefGroup = A54BB91421B670DD00A21C88 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A5C8F48621B8EEF0000AF6C3 /* Interpolation */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A5C8F48521B8EEF0000AF6C3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A5C8F4A421B8FB35000AF6C3 /* points in Resources */,
+				A5C8F49621B8EEF3000AF6C3 /* LaunchScreen.storyboard in Resources */,
+				A5C8F49321B8EEF3000AF6C3 /* Assets.xcassets in Resources */,
+				A5C8F49121B8EEF0000AF6C3 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2BBE8F4E000319CBB5E56DDC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Interpolation-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B7DFEDD807C303A3AE1042C5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Interpolation/Pods-Interpolation-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Interpolation/Pods-Interpolation-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A5C8F48321B8EEF0000AF6C3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A5C8F48E21B8EEF0000AF6C3 /* ViewController.m in Sources */,
+				A5C8F4A721B92EBD000AF6C3 /* IPGraphViewController.m in Sources */,
+				A5C8F49F21B8EF07000AF6C3 /* IPPoint.m in Sources */,
+				A5C8F49E21B8EF07000AF6C3 /* IPPointsParser.m in Sources */,
+				A5C8F49921B8EEF3000AF6C3 /* main.m in Sources */,
+				A5C8F49D21B8EF07000AF6C3 /* LinearInterpolation.m in Sources */,
+				A5C8F48B21B8EEF0000AF6C3 /* AppDelegate.m in Sources */,
+				A57EFD6721B9665200A3DE92 /* IPInterpolation.m in Sources */,
+				A5C8F4A121B8EF07000AF6C3 /* NSString+Interpolation.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		A5C8F48F21B8EEF0000AF6C3 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A5C8F49021B8EEF0000AF6C3 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A5C8F49421B8EEF3000AF6C3 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A5C8F49521B8EEF3000AF6C3 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A54BB91821B670DD00A21C88 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Interpolation/PrefixHeader.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		A54BB91921B670DD00A21C88 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Interpolation/PrefixHeader.pch;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		A5C8F49B21B8EEF3000AF6C3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E154BF505B8CA4C26627C71E /* Pods-Interpolation.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VW97WHTS78;
+				INFOPLIST_FILE = Interpolation/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ru.danpashin.Interpolation;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A5C8F49C21B8EEF3000AF6C3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 54B6DBC1C269D0ED0260C110 /* Pods-Interpolation.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VW97WHTS78;
+				INFOPLIST_FILE = Interpolation/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ru.danpashin.Interpolation;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A54BB90E21B670DD00A21C88 /* Build configuration list for PBXProject "Interpolation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A54BB91821B670DD00A21C88 /* Debug */,
+				A54BB91921B670DD00A21C88 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A5C8F49A21B8EEF3000AF6C3 /* Build configuration list for PBXNativeTarget "Interpolation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A5C8F49B21B8EEF3000AF6C3 /* Debug */,
+				A5C8F49C21B8EEF3000AF6C3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A54BB90B21B670DD00A21C88 /* Project object */;
+}

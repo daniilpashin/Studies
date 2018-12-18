@@ -1,0 +1,10 @@
+//
+//  PrefixHeader.pch
+//  Interpolation
+//
+//  Created by Даниил on 05/12/2018.
+//  Copyright © 2018 Даниил. All rights reserved.
+//
+
+#define error_log(string, ...)\
+    printf("%s:%i ERROR: '" string "'\n", @(__FILE__).lastPathComponent.UTF8String, __LINE__, ##__VA_ARGS__ )

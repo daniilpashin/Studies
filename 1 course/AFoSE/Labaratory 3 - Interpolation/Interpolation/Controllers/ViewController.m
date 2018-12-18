@@ -11,30 +11,10 @@
 
 #import "LinearInterpolation.h"
 #import "IPPointsParser.h"
-#import "IPPoint.h"
+#import "NSMutableArray+IPPoints.h"
 
-
-@interface ViewController () <UITableViewDelegate>
-@end
 
 @implementation ViewController
-
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-    self.tableView.delegate = self;
-}
-
-- (void)pushSafe:(UIViewController *)viewController
-{
-    if (NSThread.mainThread) {
-        [self.navigationController pushViewController:viewController animated:YES];
-    } else {
-        dispatch_async(dispatch_get_main_queue(), ^{
-            [self.navigationController pushViewController:viewController animated:YES];
-        });
-    }
-}
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -48,63 +28,20 @@
 - (void)presentFileLinearInterpolationController
 {
     IPGraphViewController *graphController = [IPGraphViewController new];
-    [self pushSafe:graphController];
+    [self.navigationController pushViewController:graphController animated:YES];
     
-    
-    __weak typeof(self) weakSelf = self;
     [graphController updatePoints:^NSArray<IPPoint *> * _Nonnull{
         NSString *path = [[NSBundle mainBundle] pathForResource:@"points" ofType:@""];
         NSMutableArray *points = [IPPointsParser parsePointsFromFile:path];
-        
-        
-        NSComparisonResult (^comparisonBlock)(IPPoint * _Nonnull obj1, IPPoint * _Nonnull obj2) = ^NSComparisonResult(IPPoint * _Nonnull obj1, IPPoint * _Nonnull obj2) {
-            
-            if (obj1.xValue < obj2.xValue)
-                return NSOrderedAscending;
-            else if (obj1.xValue > obj2.xValue)
-                return NSOrderedDescending;
-            
-            return NSOrderedSame;
-        };
-        
-        [weakSelf sortArray:points usingComparator:comparisonBlock];
+        [points sortPoints];
         
         NSArray *interpolatedPoints = [LinearInterpolation interpolatePoints:points withExtraPointsCount:2];
         [points addObjectsFromArray:interpolatedPoints];
+        [points sortPoints];
         
-        [weakSelf sortArray:points usingComparator:comparisonBlock];
-        
-        NSLog(@"%@", points);
-        
-        NSLog(@"%@", @(points.count));
+        NSLog(@"Points count is: %lu, points: %@", (unsigned long)points.count, points);
         return points;
     }];
-}
-
-void quicksortInPlace(NSMutableArray *array, NSInteger first, NSInteger last, NSComparator comparator)
-{
-    if (first >= last)
-        return;
-    
-    id pivot = array[(first + last) / 2];
-    NSInteger left = first;
-    NSInteger right = last;
-    while (left <= right) {
-        while (comparator(array[left], pivot) == NSOrderedAscending)
-            left++;
-        while (comparator(array[right], pivot) == NSOrderedDescending)
-            right--;
-        if (left <= right)
-            [array exchangeObjectAtIndex:left++ withObjectAtIndex:right--];
-    }
-    
-    quicksortInPlace(array, first, right, comparator);
-    quicksortInPlace(array, left, last, comparator);
-}
-
-- (void)sortArray:(NSMutableArray *)array usingComparator:(NSComparator)comparator
-{
-    quicksortInPlace(array, 0, array.count - 1, comparator);
 }
 
 @end

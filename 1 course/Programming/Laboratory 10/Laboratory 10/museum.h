@@ -12,14 +12,14 @@
 #include <stdio.h>
 
 typedef struct {
-    char country[128];
-    char city[128];
-    char street[128];
+    char *country;
+    char *city;
+    char *street;
     int house_number;
 } Address;
 
 typedef struct {
-    char name[128];
+    char *name;
     Address address;
     int found_year;
     double ticket_price;

@@ -32,7 +32,7 @@ Museum *get_spb_museums(int *count)
 void print_museum(Museum museum)
 {
     Address address = museum.address;
-    printf("%s: '%s, %s, %s %i'; Год основания: %i; Цена билета: %.2f\n", museum.name,
+    printf("%s: '%s, %s, %s %i'; Год основания: %i; Цена билета: %.2f₽\n", museum.name,
            address.country, address.city,
            address.street, address.house_number,
            museum.found_year, museum.ticket_price);

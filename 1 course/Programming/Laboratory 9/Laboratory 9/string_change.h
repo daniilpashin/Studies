@@ -18,11 +18,5 @@
 void str_remove_word_more_than_or_equal(char *string,
                                         const unsigned int min_word_length);
 
-/**
- Выполняет удаление самого последнего символа перехода на новую строку.
-
- @param string Строка, в которой необходимо удалить символ.
- */
-void str_remove_final_line_break(char *string);
 
 #endif /* string_change_h */

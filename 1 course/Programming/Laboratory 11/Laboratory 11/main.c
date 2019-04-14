@@ -48,6 +48,9 @@ void parse_file_and_write(FILE *input, FILE *output)
         char *line = NULL;
         size_t line_size = 0;
         ssize_t line_length = getline(&line, &line_size, input);
+        if (line_length == -1)
+            continue;
+        
         if (line == NULL) {
             fwrite("\n", sizeof(char), 1, output);
             printf("Строка %i невалидна!\n", line_number);

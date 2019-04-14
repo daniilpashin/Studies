@@ -13,4 +13,6 @@
 
 const int size_for_int_part(const double *numbers, const size_t size);
 
+char *concat_numbers(const double *numbers, const size_t length, size_t *out_length);
+
 #endif /* number_h */

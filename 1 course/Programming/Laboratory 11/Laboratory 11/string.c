@@ -13,8 +13,6 @@
 #include <errno.h>
 #include "number.h"
 
-char *concat_numbers(const double *numbers, const size_t length, size_t *out_length);
-
 char *normalize_line(const char *line, const size_t length, size_t *out_length)
 {
     double numbers[256];
@@ -68,31 +66,16 @@ bool is_numeric_string(const char *string)
     unsigned int dots_count = 0;
     
     for (int i = 0; i < length; i++) {
-        if (string[i] == 46) {
+        if (string[i] == '.') {
             if (++dots_count > 1)
                 return false;
             
             continue;
         }
         
-        if (string[i] < 48 || string[i] > 57)
+        if (string[i] < '0' || string[i] > '9')
             return false;
     }
     
     return true;
-}
-
-char *concat_numbers(const double *numbers, const size_t count, size_t *out_length)
-{
-    const int length = (int)(7 * count) + size_for_int_part(numbers, count);
-    
-    char *string = malloc(length * sizeof(char));
-    
-    uint32_t current_position = 0;
-    for (int i = 0; i < count; i++) {
-        current_position += sprintf(&string[current_position], "%.5lf ", numbers[i]);
-    }
-    *out_length = current_position;
-    
-    return string;
 }

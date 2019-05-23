@@ -2,7 +2,7 @@
 
 extern signed char calculate(signed char a, signed char c, signed char d);
 
-int main(int argc, char *argv[])
+int main()
 {
     signed char a = 49, c = 48, d = 48;
 

@@ -2,7 +2,7 @@
 
 extern unsigned int calculate(unsigned int a, unsigned int c, unsigned int d);
 
-int main(int argc, char *argv[])
+int main()
 {
     unsigned int a = 48, c = 48, d = 48;
 

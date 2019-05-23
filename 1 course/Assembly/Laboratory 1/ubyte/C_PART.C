@@ -2,7 +2,7 @@
 
 extern unsigned char calculate(unsigned char a, unsigned char c, unsigned char d);
 
-int main(int argc, char *argv[])
+int main()
 {
     unsigned char a = 48, c = 48, d = 48;
 

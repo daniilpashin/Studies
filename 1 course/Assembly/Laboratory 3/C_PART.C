@@ -4,19 +4,24 @@ extern signed int calculate(signed int a, signed int c, signed int d);
 
 int main()
 {
-    signed int a = 49, c = 42, d = 1;
+    signed int a = 48, c = 48, d = 48;
 
-    printf("\nPositive:\n");
+    printf("\nAll positive:\n");
     printf("A: %i; C: %i; D: %i; | ", a, c, d);
     printf("Result: %i\n\n", calculate(a, c, d));
 
     a = -a;
+
+    printf("Part positive:\n");
+    printf("A: %i; C: %i; D: %i; | ", a, c, d);
+    printf("Result: %i\n\n", calculate(a, c, d));
+
     c = -c;
     d = -d;
 
-    printf("Negative:\n");
+    printf("All negative:\n");
     printf("A: %i; C: %i; D: %i; | ", a, c, d);
-    printf("Result: %i\n\n", calculate(a, c, d));
+    printf("Result: %i\n", calculate(a, c, d));
 
     return 0;
 }

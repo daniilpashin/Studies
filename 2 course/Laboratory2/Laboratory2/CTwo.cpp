@@ -12,23 +12,25 @@
 
 #pragma mark  - Constructors/Destructors
 CTwo::CTwo() {
-    
+    std::cout << "CTwo::CTwo()" << std::endl;
 }
 
 CTwo::CTwo(CTwo &object) {
-    this->setClass(object._classVar);
+    std::cout << "CTwo::CTwo(CTwo)" << std::endl;
+    this->setObject(object._object);
     this->setDouble(object._doubleVar);
 }
 
 CTwo::CTwo(const double doubleVar, COne *object) {
-    this->setClass(object);
+    std::cout << "CTwo::CTwo(double, COne)" << std::endl;
+    this->setObject(object);
     this->setDouble(doubleVar);
 }
 
 CTwo::~CTwo() {
-    if (this->_classVar != nullptr) {
-        std::cout << "Removing class " << this->_classVar << std::endl;
-        delete this->_classVar;
+    std::cout << "CTwo::~CTwo()" << std::endl;
+    if (this->_object != nullptr) {
+        delete this->_object;
     }
 }
 
@@ -36,10 +38,11 @@ CTwo::~CTwo() {
 std::ostream & operator << (std::ostream &out, const CTwo &object) {
     out << "<CTwo: " << &object << "; ";
     out << "doubleVar = " << object._doubleVar << "; class = ";
-    (object._classVar != nullptr) ? (out << object._classVar) : (out << "nullptr");
+    (object._object != nullptr) ? (out << *object._object) : (out << "nullptr");
     out << ">";
     return out;
 }
+
 CTwo & CTwo::operator = (const CTwo &object)
 {
 #ifdef DEBUG
@@ -47,7 +50,7 @@ CTwo & CTwo::operator = (const CTwo &object)
 #endif
     
     if (this != &object) {
-        this->setClass(object._classVar);
+        this->setObject(object._object);
         this->setDouble(object._doubleVar);
     }
     
@@ -55,8 +58,8 @@ CTwo & CTwo::operator = (const CTwo &object)
 }
 
 #pragma mark - Methods
-COne *CTwo::getClass() {
-    return this->_classVar;
+COne *CTwo::getObject() {
+    return this->_object;
 }
 
 double CTwo::getDouble() {
@@ -67,14 +70,14 @@ void CTwo::setDouble(double doubleVar) {
     this->_doubleVar = doubleVar;
 }
 
-void CTwo::setClass(COne *object) {
+void CTwo::setObject(COne *object) {
     if (object == nullptr) {
         throw std::invalid_argument("object must be a not null pointer to COne!");
     }
     
-    if (this->_classVar != nullptr) {
-        delete this->_classVar;
+    if (this->_object != nullptr && object != this->_object) {
+        delete this->_object;
     }
     
-    this->_classVar = object;
+    this->_object = object;
 }

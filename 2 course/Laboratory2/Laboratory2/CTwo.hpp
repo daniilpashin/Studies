@@ -13,23 +13,23 @@
 #include "COne.hpp"
 
 class CTwo {
-private:
+protected:
     double _doubleVar;
-    COne *_classVar = nullptr;
+    COne *_object = nullptr;
     
 public:
     CTwo();
-    ~CTwo();
+    virtual ~CTwo();
     CTwo(CTwo &object);
     CTwo(double doubleVar, COne *object);
     
     friend std::ostream & operator << (std::ostream &out, const CTwo &object);
     CTwo & operator = (const CTwo &object);
     
-    COne *getClass();
+    COne *getObject();
     double getDouble();
     
-    void setClass(COne *object);
+    void setObject(COne *object);
     void setDouble(double doubleVar);
 };
 

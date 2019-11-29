@@ -7,8 +7,7 @@
 //
 
 #include <iostream>
-#include "COne.hpp"
-#include "CTwo.hpp"
+#include "CThree.hpp"
 
 void testNullPtr() {
     COne first;
@@ -45,9 +44,13 @@ int main(int argc, const char * argv[]) {
     
     std::string str = std::string("TEST");
     COne *first = new COne(10, &str);
-    std::cout << first << std::endl;
-    CTwo second(0.0, first);
     
+//    CTwo *second = new CTwo(0.0, first);
+//    delete second;
+    
+    CThree *three = new CThree(2, 0.0, first);
+    std::cout << *three << std::endl;
+    delete three;
     
     return 0;
 }

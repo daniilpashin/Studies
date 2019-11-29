@@ -11,25 +11,20 @@
 
 #pragma mark  - Constructors/Destructors
 COne::COne() {
-    
+    std::cout << "COne::COne()" << std::endl;
 }
 
 COne::COne(long longVar, std::string *stringVar) {
+    std::cout << "COne::COne(long, string)" << std::endl;
     this->setLong(longVar);
     this->setString(stringVar);
 }
 
 COne::~COne() {
+    std::cout << "COne::~COne()" << std::endl;
     if (this->_stringVar != nullptr) {
-#ifdef DEBUG
-        std::cout << "Deleting string in " << this << std::endl;
-#endif
         delete this->_stringVar;
     }
-    
-#ifdef DEBUG
-    std::cout << "Deleted " << this << std::endl;
-#endif
 }
 
 COne::COne(const COne &object) {

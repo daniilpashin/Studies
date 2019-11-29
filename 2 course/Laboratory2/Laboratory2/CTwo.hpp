@@ -15,7 +15,7 @@
 class CTwo {
 protected:
     double _doubleVar;
-    COne *_object = nullptr;
+    COne _object;
     
 public:
     CTwo();
@@ -24,12 +24,12 @@ public:
     CTwo(double doubleVar, COne *object);
     
     friend std::ostream & operator << (std::ostream &out, const CTwo &object);
-    CTwo & operator = (const CTwo &object);
+    CTwo & operator = (CTwo &object);
     
-    COne *getObject();
+    COne getObject();
     double getDouble();
     
-    void setObject(COne *object);
+    void setObject(COne &object);
     void setDouble(double doubleVar);
 };
 

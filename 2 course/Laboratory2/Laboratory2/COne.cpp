@@ -27,7 +27,7 @@ COne::~COne() {
     }
 }
 
-COne::COne(const COne &object) {
+COne::COne(COne &object) {
     this->setString(object._stringVar);
     this->setLong(object._longVar);
 }

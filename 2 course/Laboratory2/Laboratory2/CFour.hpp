@@ -10,5 +10,21 @@
 #define CFour_hpp
 
 #include <stdio.h>
+#include "CThree.hpp"
+
+class CFour: public CThree {
+protected:
+    char *_someCharString = nullptr;
+    
+public:
+    CFour();
+    ~CFour();
+    CFour(const char *someChar, const int someInt, const double doubleVar, COne *object);
+    
+    friend std::ostream & operator << (std::ostream &out, const CFour &object);
+    
+    char *getSomeCharString();
+    void setSomeCharString(const char *someCharString);
+};
 
 #endif /* CFour_hpp */

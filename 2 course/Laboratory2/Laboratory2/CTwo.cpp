@@ -16,38 +16,32 @@ CTwo::CTwo() {
 }
 
 CTwo::CTwo(CTwo &object) {
-    std::cout << "CTwo::CTwo(CTwo)" << std::endl;
+    std::cout << "CTwo::CTwo(CTwo&)" << std::endl;
     this->setObject(object._object);
     this->setDouble(object._doubleVar);
 }
 
 CTwo::CTwo(const double doubleVar, COne *object) {
-    std::cout << "CTwo::CTwo(double, COne)" << std::endl;
-    this->setObject(object);
+    std::cout << "CTwo::CTwo(double, COne*)" << std::endl;
+    this->setObject(*object);
     this->setDouble(doubleVar);
 }
 
 CTwo::~CTwo() {
     std::cout << "CTwo::~CTwo()" << std::endl;
-    if (this->_object != nullptr) {
-        delete this->_object;
-    }
 }
 
 #pragma mark - Operators
 std::ostream & operator << (std::ostream &out, const CTwo &object) {
     out << "<CTwo: " << &object << "; ";
-    out << "doubleVar = " << object._doubleVar << "; class = ";
-    (object._object != nullptr) ? (out << *object._object) : (out << "nullptr");
+    out << "doubleVar = " << object._doubleVar << "; object = " << object._object << ";";
     out << ">";
     return out;
 }
 
-CTwo & CTwo::operator = (const CTwo &object)
+CTwo & CTwo::operator = (CTwo &object)
 {
-#ifdef DEBUG
     std::cout << "this = " << this << std::endl;
-#endif
     
     if (this != &object) {
         this->setObject(object._object);
@@ -58,7 +52,7 @@ CTwo & CTwo::operator = (const CTwo &object)
 }
 
 #pragma mark - Methods
-COne *CTwo::getObject() {
+COne CTwo::getObject() {
     return this->_object;
 }
 
@@ -70,14 +64,6 @@ void CTwo::setDouble(double doubleVar) {
     this->_doubleVar = doubleVar;
 }
 
-void CTwo::setObject(COne *object) {
-    if (object == nullptr) {
-        throw std::invalid_argument("object must be a not null pointer to COne!");
-    }
-    
-    if (this->_object != nullptr && object != this->_object) {
-        delete this->_object;
-    }
-    
+void CTwo::setObject(COne &object) {
     this->_object = object;
 }

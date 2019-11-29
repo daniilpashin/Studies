@@ -13,11 +13,14 @@ CThree::CThree() {
     std::cout << "CThree::CThree()" << std::endl;
 }
 
-CThree::CThree(const int someInt, const double doubleVar, COne *object) {
-    std::cout << "CThree::CThree(int, double, COne)" << std::endl;
+CThree::CThree(CThree &object): CTwo(object) {
+    std::cout << "CThree::CThree(CThree&)" << std::endl;
+    this->setSomeInt(object._someInt);
+}
+
+CThree::CThree(const int someInt, const double doubleVar, COne *object): CTwo(doubleVar, object) {
+    std::cout << "CThree::CThree(int, double, COne*)" << std::endl;
     this->setSomeInt(someInt);
-    this->setDouble(doubleVar);
-    this->setObject(object);
 }
 
 CThree::~CThree() {
@@ -26,8 +29,8 @@ CThree::~CThree() {
 
 std::ostream & operator << (std::ostream &out, const CThree &object) {
     out << "<CThree: " << &object << "; ";
-    out << "intVar=" << object._someInt << "; doubleVar = " << object._doubleVar << "; class = ";
-    (object._object != nullptr) ? (out << *object._object) : (out << "nullptr");
+    out << "intVar = " << object._someInt << "; doubleVar = " << object._doubleVar << ";";
+    out << " object = " << object._object << ";";
     out << ">";
     return out;
 }

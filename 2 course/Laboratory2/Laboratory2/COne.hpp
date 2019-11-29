@@ -20,7 +20,7 @@ private:
 public:
     COne();
     ~COne();
-    COne(const COne &object);
+    COne(COne &object);
     COne(long longVar, std::string *stringVar);
     
     friend std::ostream & operator << (std::ostream &out, const COne &object);

@@ -51,6 +51,11 @@ CTwo & CTwo::operator = (CTwo &object)
     return *this;
 }
 
+void CTwo::print() {
+    std::cout << "CTwo::print()" << std::endl;
+    std::cout << *this << std::endl;
+}
+
 #pragma mark - Methods
 COne CTwo::getObject() {
     return this->_object;

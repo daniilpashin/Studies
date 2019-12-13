@@ -18,9 +18,11 @@ protected:
     
 public:
     CThree();
-    ~CThree();
+    virtual ~CThree();
     CThree(CThree &object);
     CThree(const int someInt, const double doubleVar, COne *object);
+    
+    virtual void print();
     
     friend std::ostream & operator << (std::ostream &out, const CThree &object);
     

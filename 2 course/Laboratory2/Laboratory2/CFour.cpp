@@ -22,7 +22,7 @@ CFour::CFour(const char *someCharString, const int someInt, const double doubleV
 CFour::~CFour() {
     std::cout << "CFour::~CFour()" << std::endl;
     if (this->_someCharString != nullptr) {
-        delete [] this->_someCharString;
+        std::free(this->_someCharString);
         this->_someCharString = nullptr;
     }
 }
@@ -35,9 +35,14 @@ std::ostream & operator << (std::ostream &out, const CFour &object) {
     return out;
 }
 
+void CFour::print() {
+    std::cout << "CFour::print()" << std::endl;
+    std::cout << *this << std::endl;
+}
+
 void CFour::setSomeCharString(const char *someCharString) {
     if (this->_someCharString != nullptr) {
-        delete [] this->_someCharString;
+        std::free(this->_someCharString);
     }
     
     this->_someCharString = (someCharString != nullptr) ? strdup(someCharString) : nullptr;

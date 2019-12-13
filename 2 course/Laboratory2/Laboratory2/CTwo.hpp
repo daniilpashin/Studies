@@ -26,6 +26,8 @@ public:
     friend std::ostream & operator << (std::ostream &out, const CTwo &object);
     CTwo & operator = (CTwo &object);
     
+    virtual void print();
+    
     COne getObject();
     double getDouble();
     

@@ -28,11 +28,16 @@ CThree::~CThree() {
 }
 
 std::ostream & operator << (std::ostream &out, const CThree &object) {
-    out << "<CThree: " << &object << "; ";
-    out << "intVar = " << object._someInt << "; doubleVar = " << object._doubleVar << ";";
+    out << "<CThree: " << &object << ";";
+    out << " intVar = " << object._someInt << "; doubleVar = " << object._doubleVar << ";";
     out << " object = " << object._object << ";";
     out << ">";
     return out;
+}
+
+void CThree::print() {
+    std::cout << "CThree::print()" << std::endl;
+    std::cout << *this << std::endl;
 }
 
 void CThree::setSomeInt(const int someInt) {
